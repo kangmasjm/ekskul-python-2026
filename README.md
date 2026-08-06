@@ -3,7 +3,7 @@
 Selamat datang di repositori resmi ekstrakurikuler Python!
 
 ## 📁 Struktur Folder Pengumpulan
-Harap kumpulkan tugas di dalam folder dengan format: `NamaSiswa_Kelas`
+Harap kumpulkan tugas di dalam folder dengan format: `NamaSiswa`
 Contoh: `Jiem/bio_generator.py`
 
 ## ⚠️ Aturan Penting (Wajib Ditaati)
