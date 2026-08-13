@@ -1,0 +1,21 @@
+print("==================================")
+print("FORM PENDAFTARAN BIODATA SISWA")
+print("==================================")
+
+nama_lengkap = input("Nama Lengkap : ")
+jurusan = input("Jurusan : ")
+kelas = input("Kelas (X/XI/XII) : ")
+hobi_utama = input("Hobi Utama : ")
+cita_cita = input("Cita-cita : ")
+tahun_lahir = input("Tahun Lahir : ")
+
+print("==================================")
+print("KARTU PROFIL DIGITAL SISWA")
+print("==================================")
+
+print(f"{nama_lengkap}")
+print(f"{kelas}")
+print(f"{hobi_utama}")
+print(f"{cita_cita}")
+umur = 2026 - int(tahun_lahir)
+print(f"Umur : {umur}")
