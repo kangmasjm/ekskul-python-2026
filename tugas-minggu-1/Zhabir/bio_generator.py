@@ -1,1 +1,22 @@
+print("="*40)
+print("     FORM PENDAFTARAN BIODATA SISWA      ")
+print("="*40)
 
+nama = input("Masukkan nama kamu: ")
+jurusan = input("Masukkan jurusan kamu: ")
+kelas = input("Kelas X/XI/XII: ")
+hobi = input("Masukkan hobi kamu: ")
+citacita = input("Masukkan cita-cita kamu:")
+tahun = int(input("Masukkan tahun lahir: "))
+
+print("="*40)
+print("     KARTU PROFIL DIGITAL SISWA      ")
+print("="*40)
+
+print(f"Nama : {nama}")
+print(f"Jurusan: {jurusan}")
+print(f"Kelas: {kelas}")
+print(f"Hobi: {hobi}")
+print(f"Cita-cita: {citacita}")
+print(f"Tahun: {tahun}")
+print(f"Pesan Motivasi: Semangat ya {nama}, kamu pasti bisa!")
