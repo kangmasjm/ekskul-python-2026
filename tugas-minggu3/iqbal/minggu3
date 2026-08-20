@@ -1,4 +1,3 @@
-nama = input("Masukkan Nama Anda:")
 kehadiran = int(input("Masukkan Kehadiran Anda:"))
 sikap = input("pilih sikap (A/B/C):").upper()
 jumlah_project = int(input("Masukkan Jumlah Project Anda:"))
