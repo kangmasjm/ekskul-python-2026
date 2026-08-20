@@ -1,0 +1,16 @@
+nama = input("Masukkan Nama Anda:")
+kehadiran = int(input("Masukkan Kehadiran Anda:"))
+sikap = input("pilih sikap (A/B/C):").upper()
+jumlah_project = int(input("Masukkan Jumlah Project Anda:"))
+
+if kehadiran >= 85 and (sikap == "B" or sikap == "A") and jumlah_project >= 3 and jumlah_project <= 4:
+    print("magang di startup")
+elif kehadiran < 85 and (sikap == "B" or sikap == "A") and jumlah_project >= 5:
+    print("magang di BUMN")
+elif kehadiran < 85 :
+    print("belum layak harus perbaiki kehadiran")
+elif sikap == "C":
+    print("belum layak harus perbaiki sikap")
+elif jumlah_project < 3:
+    print("belum layak harus perbanyak project")
+    
