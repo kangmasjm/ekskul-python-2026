@@ -1,0 +1,35 @@
+
+nama = input("Nama Lengkap: ")
+golongan = input("Pilih Golongan (A/B/C) : ").upper()
+jam = int(input("Total Jam Kerja/Minggu : "))
+rating = int(input("Rating Performa (1-5) : "))
+
+gaji = 0
+if golongan == "A" :
+    gaji = 50000
+elif golongan == "B":
+    gaji = 35000
+elif golongan == "C":
+    gaji = 25000
+
+lembur = 0
+if jam > 40:
+    lembur = gaji * 1.5
+
+bonus = 0
+if rating >=4 and jam >=40:
+    bonus = 200000
+
+total = (gaji * jam) + lembur + bonus
+
+
+print("=" * 40)
+print("GAJI KARYAWAN")
+print("=" * 40)
+print(f"Nama Karyawan : {nama}")
+print(f"Golongan : {golongan}")
+print(f"Tarif Per Jam : Rp {gaji}")
+print(f"Gaji Pokok : Rp {gaji}")
+print(f"Gaji Lembur : Rp {lembur}")
+print(f"Bonus : Rp {bonus}")
+print(f"Total Gaji  : Rp {total}")
