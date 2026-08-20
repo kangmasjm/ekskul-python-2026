@@ -1,0 +1,31 @@
+print("=" * 40)
+print ("SISTEM PENGHITUNG GAJI KARYAWAN SMK")
+print("=" * 40)
+
+nama = input("Masukan Nama Karyawan")
+golongan = input("Pilih Golongan (A/B/C)".upper)
+total = input("Total Jam Kerja/Minggu")
+rating = input("Rating Performa (1-5)")
+
+gaji = total * golongan 
+
+if golongan == "A":
+    print ("50.000")
+elif golongan == "B":
+    print ("35.000")
+elif golongan == "C":
+    print ("25.000")
+else:
+    print ("Masukan A/B/C!")
+
+
+print("=" * 40)
+print ("SLIP GAJI KARYAWAN")
+print("=" * 40)
+
+print(f"Nama Karyawan : {nama}")
+print(f"Golongan : {golongan}")
+print(f"Tarif Per Jam : {total}")
+
+print(f"Gaji Pokok (40 Jam) : {total}")
+
