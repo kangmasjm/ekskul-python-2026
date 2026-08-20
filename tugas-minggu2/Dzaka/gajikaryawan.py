@@ -1,36 +1,31 @@
-print("="*40)
-print("SISTEM PENGHITUNG GAJI KARYAWAN")
-print("="*40)
+print("=== Sistem Penghitung Gaji Karyawan SMK ===")
+nama = input("masukkan Nama Karyawan: ")
+golongan = input("pilih Golongan (A/B/C): ").upper()
+total_jam_kerja = int(input("total Jam Kerja: "))
+rating_performa = float(input("rating Performa (1 - 5): "))
 
-nama = input("Masukkan nama karyawan: ")
-gol = input("Pilih Golongan (A/B/C): ")
-jam = int(input("Total jam kerja/minggu: "))
-rating = int(input("Rating performa(1-5): "))
+A = int(50000)
+B = int(35000)
+C = int(25000)
 
+if golongan == "A":
+    tarif_per_jam = A * total_jam_kerja
+elif golongan == "B":
+    tarif_per_jam = B * total_jam_kerja
+elif golongan == "C":
+    tarif_per_jam = C * total_jam_kerja
 
+if total_jam_kerja >= 40 and rating_performa >= 4:
+    jam_lembur = total_jam_kerja - 40
+    gaji_lembur = jam_lembur * tarif_per_jam * 1.5
+    bonus_performa = tarif_per_jam * 0.1
 
-if gol == "A":
-    tarif = 50000
-elif gol == "B":
-    tarif = 35000
-elif gol == "C":
-    tarif = 25000
+print("\n=== slip gaji karyawan ===")
+print(f"nama Karyawan: {nama}")
+print(f"golongan: {golongan}")
+print(f"tarif per jam: {tarif_per_jam}")
+print(f"gaji pokok (40 jam kerja): {tarif_per_jam * 40}")
+print(f"gaji lembur ({jam_lembur} jam): {gaji_lembur}")
+print(f"bonus performa: {bonus_performa}")
 
-pokok = tarif * jam
-
-if jam > 40:
-    lembur = tarif * 1.5
-
-if rating >= 4:
-    bonus = 200000
-
-print("="*40)
-print("SLIP GAJI KARYAWAN")
-print("="*40)
-
-print(f"Nama karyawan: {nama}")
-print(f"Golongan: {gol}")
-print(f"Tari per Jam: {tarif}")
-print("-"*40)
-print(f"Gaji pokok ({jam} jam): {pokok}")
-print(f"Gaji lembur ()")
+print(f"Total Gaji: {tarif_per_jam * 40 + gaji_lembur + bonus_performa}")
