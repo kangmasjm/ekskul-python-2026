@@ -3,6 +3,9 @@ golongan_B = 35000
 golongan_C = 25000
 jam_normal = 40
 
+def format_rupiah(nilai) :
+    return f"{nilai:,}".replace(",", ".")
+
 print("=" * 60)
 print("             SISTEM PENGHITUNG GAJI KARYAWAN SMK")
 print("=" * 60)
@@ -29,18 +32,23 @@ if jam_lembur < 0 :
 
 gaji_pokok = total_jam * tarif
 
+gaji_lembur = jam_lembur * tarif
 
+if rating >= 4 and jam_normal >= 40 :
+    bonus = 200000
+
+gaji_total = gaji_pokok + gaji_lembur + bonus
 
 print("=" * 60)
 print("         SLIP GAJI KARYAWAN")
 print("=" * 60)
 print(f"Nama Karyawan   : {nama}")
-print(f"Golongan    : {pilih_gol.upper()}")
-print(f"Tarif per Jam   : Rp {tarif}")
+print(f"Golongan        : {pilih_gol.upper()}")
+print("Tarif per Jam   : Rp " + format_rupiah(tarif))
 print("-" * 60)
-print(f"Gaji Pokok ({total_jam} jam) : Rp {gaji_pokok}")
-print(f"Gaji Lembur ({jam_lembur} jam)  : Rp")
-print(f"Bonus Performa  : Rp")
+print(f"Gaji Pokok ({total_jam} jam)  : Rp " + format_rupiah(gaji_pokok))
+print(f"Gaji Lembur ({jam_lembur} jam)  : Rp " + format_rupiah(gaji_lembur))
+print(f"Bonus Performa        : Rp " + format_rupiah(bonus))
 print("-" * 60)
-print("TOTAL GAJI DITERIMA: Rp")
+print(f"TOTAL GAJI DITERIMA   : Rp " + format_rupiah(gaji_total))
 print("=" * 60)
