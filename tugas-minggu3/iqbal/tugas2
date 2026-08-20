@@ -1,0 +1,26 @@
+total_belanja = int(input("Masukkan total nilai: "))
+member = input("Apakah anda member (Y/T): ").upper()
+jarak = int(input("Masukkan jarak (km): "))
+if member == "Y" and total_belanja >= 5000000:
+    diskon = total_belanja * 0.2
+    total = total_belanja - diskon
+    print("Anda mendapatkan diskon " + str(diskon))
+    print("Total belanja anda adalah " + str(total))
+elif member == "Y" and total_belanja >= 3000000:
+    diskon = total_belanja * 0.1
+    total = total_belanja - diskon
+    print("Anda mendapatkan diskon " + str(diskon))
+    print("Total belanja anda adalah " + str(total))
+else:
+    diskon = 0
+    total = total_belanja
+    print("Anda tidak mendapatkan diskon")
+    print("Total belanja anda adalah " + str(total))
+if total >= 2000000 and jarak <= 10:
+    ongkir = 0
+    print("Anda mendapatkan gratis ongkir")
+else:
+    ongkir = 3000
+    print("Anda harus membayar ongkir sebesar " + str(ongkir))
+jumlah_bayar = total + ongkir
+print("Jumlah yang harus dibayar adalah " + str(jumlah_bayar))
