@@ -15,4 +15,4 @@ elif nilaiKehadiran <= 85 and nilaiSikap == "C" or nilaiSikap =="D" and projek <
 else :
     print ("Tidak Lulus")
 
-print ("=" * 40)
+print ("=" * 41)
